@@ -5,8 +5,37 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-Product.delete_all
-Product.create!(title: 'Docker for Rails Developers',
+PProduct.delete_all 
+# . . . 
+Product.create(
+title: 'Seven Mobile Apps in Seven Weeks', 
+description:
+ %{<p>
+ <em>Native Apps, Multiple Platforms</em> 
+ Answer the question “Can we build this for ALL the devices?” with a 
+ resounding YES. This book will help you get there with a real-world 
+ introduction to seven platforms, whether you’re new to mobile or an 
+ experienced developer needing to expand your options. Plus, you’ll find out 
+ which cross-platform solution makes the most sense for your needs. 
+ </p>}, 
+ image_url: '7apps.jpg', 
+ price: 26.00) 
+ # . . .
+ 
+ Product.create(
+ title: 'Programming Ruby 1.9 & 2.0', 
+ description: 
+ %{<p>
+ Ruby is the fastest growing and most exciting dynamic language out there. 
+ If you need to get working programs delivered fast, you should add Ruby to 
+ your toolbox. 
+ </p>}, 
+ image_url: 'ruby.jpg', 
+ price: 49.95)
+ 
+
+Product.create(
+title: 'Docker for Rails Developers',
   description:
     %{<p>
       <em>Build, Ship, and Run Your Applications Everywhere</em>
@@ -22,7 +51,8 @@ Product.create!(title: 'Docker for Rails Developers',
   image_url: 'ridocker.jpg',
   price: 38.00)
 # . . .
-Product.create!(title: 'Build Chatbot Interactions',
+Product.create(
+title: 'Build Chatbot Interactions',
   description:
     %{<p>
       <em>Responsive, Intuitive Interfaces with Ruby</em>
@@ -39,7 +69,8 @@ Product.create!(title: 'Build Chatbot Interactions',
   price: 20.00)
 # . . .
 
-Product.create!(title: 'Programming Crystal',
+Product.create(
+title: 'Programming Crystal',
   description:
     %{<p>
       <em>Create High-Performance, Safe, Concurrent Apps</em>
@@ -54,3 +85,5 @@ Product.create!(title: 'Programming Crystal',
       </p>},
   image_url: 'crystal.jpg',
   price: 40.00)
+
+
