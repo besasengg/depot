@@ -1,4 +1,5 @@
 class ProductsController < ApplicationController
+#class ProductController <ActiveRecor::Base64
   before_action :set_product, only: [:show, :edit, :update, :destroy]
 
   # GET /products
