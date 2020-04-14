@@ -16,6 +16,17 @@
     </header>
     <section class="content">
       <nav class="side_nav">
+	  <div id="cart" class="carts"
+        <% if @cart.line_items.empty? %>
+   		  style="display: none"
+		  <% end %>
+        >
+		<%= render(@cart) %> 
+            
+        
+        </div>
+		
+		
         <ul>
           <li><a href="http://www....">Home</a></li>
           <li><a href="http:.//www....">Questions</a></li>
@@ -23,7 +34,7 @@
           <li><a href="http://www....">Contact</a></li>
         </ul>
       </nav>
-			<main class='<%= controller.controller_name %>'>
+	  <main class='<%= controller.controller_name %>'>
         <%= yield %>
       </main>
     </section>

@@ -1,5 +1,7 @@
 class StoreController < ApplicationController
-#class StoreController < ActiveRecord :: Base64
+
+  include CurrentCart
+  before_action :set_cart
   def index
   @products = Product.order(:title)
   end
