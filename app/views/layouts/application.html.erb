@@ -7,7 +7,7 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+  </head
 
   <body>
     <header class="main">
@@ -16,13 +16,15 @@
     </header>
     <section class="content">
       <nav class="side_nav">
-	  <div id="cart" class="carts"
-        <% if @cart.line_items.empty? %>
-   		  style="display: none"
-		  <% end %>
-        >
-		<%= render(@cart) %> 
-            
+	  <div id="cart" class="carts">
+        <% if @cart %>
+		  <%= hidden_div_if(@cart.line_items.empty?, id: 'cart') do %>➤ 
+		
+        
+		    <%= render(@cart) %> 
+		  <%end %>
+		
+        <%end %>    
         
         </div>
 		
